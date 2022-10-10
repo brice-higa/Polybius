@@ -12,7 +12,7 @@ public class ParallaxLayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		wantedPosition = Camera.main.transform.position * movement_resistance;
 			wantedPosition.z = transform.position.z;
 			transform.position = wantedPosition;
