@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FacesPlayer : MonoBehaviour
 {
+    public float rotSpeed = 90f;
 
     public Transform player;
 
@@ -12,7 +13,7 @@ public class FacesPlayer : MonoBehaviour
     {
         if(player == null)
         {
-            GameObject go = GameObject.Find("PlayerShip");
+            GameObject go = GameObject.FindWithTag("Player");
 
             if(go != null)
             {
@@ -23,6 +24,15 @@ public class FacesPlayer : MonoBehaviour
         if(player == null)
         {return;} //looking for player in next frame
 
-        transform.rotation = Quaternion.Euler(0, 0, 180*Time.time); //rotating enemy ship
+        Vector3 dir = player.position - transform.position; 
+        dir.Normalize();
+
+        float zAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+
+        Quaternion desiredRot = Quaternion.Euler(0,0,zAngle);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, rotSpeed*Time.deltaTime);
+
+
     }
 }

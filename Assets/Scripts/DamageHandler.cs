@@ -8,12 +8,22 @@ public class DamageHandler : MonoBehaviour
        public float invulnPeriod = 0;
        float invulnTimer = 0; //seconds of invulnerability after crashing.
        int correctLayer = 0;
+       SpriteRenderer spriteRend;
+    
 
        void Start(){
-
         correctLayer = gameObject.layer;
 
-            
+        spriteRend = GetComponent<SpriteRenderer>();
+        //This only gets the renderer on the parent object.
+        //It doesn't work for children.
+        if(spriteRend == null){
+            spriteRend = transform.GetComponentInChildren<SpriteRenderer>();
+
+            if(spriteRend == null){
+                Debug.LogError("Object '"+gameObject.name+"' has no sprite renderer");
+                }
+            }
         }
 
         void OnTriggerEnter2D(){
@@ -33,6 +43,15 @@ public class DamageHandler : MonoBehaviour
             if (invulnTimer <= 0)
             {
                 gameObject.layer = correctLayer;
+                if(spriteRend != null){
+                    spriteRend.enabled = true;
+                }
+            }
+            else 
+            {
+                if(spriteRend != null){
+                    spriteRend.enabled = !spriteRend.enabled;
+                }
             }
 
             if (health <= 0){
