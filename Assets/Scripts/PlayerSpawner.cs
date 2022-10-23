@@ -8,6 +8,7 @@ public class PlayerSpawner : MonoBehaviour
     GameObject playerInstance;
     public int numLives = 4;
     public float respawnTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,6 @@ public class PlayerSpawner : MonoBehaviour
         numLives--;
         respawnTimer = 3;
         playerInstance = (GameObject)Instantiate(playerPrefab, transform.position, Quaternion.identity);
-
     }
 
     // Update is called once per frame
