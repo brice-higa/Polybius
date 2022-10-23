@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static EnemySpawner;
 
-public class DamageHandler : MonoBehaviour
+public class EnemyDamageHandler : MonoBehaviour
     {
        public int health = 1;
        public float invulnPeriod = 0;
        float invulnTimer = 0; //seconds of invulnerability after crashing.
        int correctLayer = 0;
-       int maxHealth = 30;
        SpriteRenderer spriteRend;
+       public GameObject healthDrop;
     
 
        void Start(){
@@ -27,25 +28,13 @@ public class DamageHandler : MonoBehaviour
             }
         }
 
-        void OnTriggerEnter2D(Collider2D other){
-            
-            Debug.Log("Trigger by " + other.gameObject.tag);
+        void OnTriggerEnter2D(){
+            Debug.Log("Trigger!");
 
-            if(other.gameObject.tag == "healthTag")
-            {
-                health = health + 5;
-                if(health > maxHealth)
-                    health = maxHealth;
-
-                Debug.Log("Trigger by " + other.gameObject + " and increased health by 5");
-            }
-            else
-            {
-                health--; //reduce health by 1 point
-                invulnTimer = 1.5f; // 1.5 seconds of invulnerability after collision
-                gameObject.layer = 8; //changing to invulnerable layer
-            }
             
+            health--; //reduce health by 1 point
+            invulnTimer = 1.5f; // 1.5 seconds of invulnerability after collision
+            gameObject.layer = 8; //changing to invulnerable layer
 
         }
 
@@ -69,20 +58,15 @@ public class DamageHandler : MonoBehaviour
 
             if (health <= 0){
                 Die();
+                enemiesKilled++;
             }
         }
 
         void Die(){
             Destroy(gameObject);
-        }
-
-        void OnGUI(){
-            if(health > 0){
-            GUI.Label(new Rect(0,0,100,50), "Health: " + health);
-            }
-            else{
-                GUI.Label(new Rect(Screen.width/2 - 50, Screen.height/2 - 25,100,50), "GAME OVER");
-            }
+            Instantiate(healthDrop, transform.position, Quaternion.identity);
 
         }
+
+        
 }
