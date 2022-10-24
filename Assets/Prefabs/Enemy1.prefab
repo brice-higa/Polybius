@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4693003958229822405}
   - component: {fileID: 4693003958229822404}
-  - component: {fileID: 4693003958229822402}
   - component: {fileID: 4693003958229822401}
   - component: {fileID: 4693003958229822400}
   - component: {fileID: 7081707169842302924}
   - component: {fileID: 1694868451241387057}
+  - component: {fileID: -5267047018220517079}
   m_Layer: 7
   m_Name: Enemy1
   m_TagString: Untagged
@@ -59,20 +59,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4693003958229822402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4693003958229822407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f652f6c6cde1b749a4cf94d59008070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  invulnPeriod: 0
 --- !u!114 &4693003958229822401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +117,21 @@ MonoBehaviour:
   bulletOffset: {x: 0, y: 1, z: 0}
   bulletPrefab: {fileID: 4754753186704676132, guid: c7a42a5908437cd41b6203828a9f7fd1, type: 3}
   fireDelay: 1.25
+--- !u!114 &-5267047018220517079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693003958229822407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5052b7cd531ddf3449a36b43a988f7bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  invulnPeriod: 0
+  healthDrop: {fileID: 5215219944157461473, guid: 9e5bfd3d1533c01458a5185087f546e5, type: 3}
 --- !u!1 &4693003959125566015
 GameObject:
   m_ObjectHideFlags: 0
