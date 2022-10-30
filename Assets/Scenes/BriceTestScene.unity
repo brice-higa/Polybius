@@ -523,6 +523,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &390822606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390822607}
+  - component: {fileID: 390822608}
+  m_Layer: 0
+  m_Name: AsteroidSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &390822607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390822606}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1160398955}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &390822608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390822606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb81f40a4e790b418ffce4d9bc6cc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidRate: 5
+  nextAsteroid: 1
+  asteroidPrefab: {fileID: 4172148630160415869, guid: 7decbdab4eb60154393c291f3dce9df1, type: 3}
+  spawnDistance: 10
 --- !u!1 &632526505
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0dbd5fe23302ce48ab15a9bf0ba4251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyRate: 5
+  nextEnemy: 2
   enemyPrefab: {fileID: 4693003958229822407, guid: ca13a02d9456e2d47bf966674b0818ec, type: 3}
   spawnDistance: 10
 --- !u!1 &1134915723
@@ -996,6 +1046,7 @@ Transform:
   m_Children:
   - {fileID: 1694370892}
   - {fileID: 1064638215}
+  - {fileID: 390822607}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1011,7 +1062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b8edf30b16cf84185c5802efaf3802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myTarget: {fileID: 9187437709575835908, guid: 31c25a8214ec4b341921297106030835, type: 3}
 --- !u!1 &1208332313
 GameObject:
   m_ObjectHideFlags: 0
