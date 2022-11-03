@@ -406,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1057769166}
-  - component: {fileID: 1057769165}
+  - component: {fileID: 1057769167}
   m_Layer: 0
   m_Name: AsteroidSpawner
   m_TagString: Untagged
@@ -414,22 +414,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1057769165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057769164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb81f40a4e790b418ffce4d9bc6cc4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asteroidRate: 5
-  nextAsteroid: 1
-  asteroidPrefab: {fileID: 4172148630160415869, guid: 7decbdab4eb60154393c291f3dce9df1, type: 3}
-  spawnDistance: 10
 --- !u!4 &1057769166
 Transform:
   m_ObjectHideFlags: 0
@@ -445,6 +429,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1057769167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057769164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb81f40a4e790b418ffce4d9bc6cc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidRate: 5
+  nextAsteroid: 1
+  copperAsteroidPrefab: {fileID: 4172148630160415869, guid: 094a2864b57fd0443bfc34350bea8100, type: 3}
+  ironAsteroidPrefab: {fileID: 4172148630160415869, guid: 7decbdab4eb60154393c291f3dce9df1, type: 3}
+  spawnDistance: 15
 --- !u!1 &1943775233
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,9 +475,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0dbd5fe23302ce48ab15a9bf0ba4251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyRate: 30
-  nextEnemy: 5
-  enemyPrefab: {fileID: 4693003958229822407, guid: ca13a02d9456e2d47bf966674b0818ec, type: 3}
+  enemyRate: 5
+  nextEnemy: 0
+  enemy1Prefab: {fileID: 4693003958229822407, guid: ca13a02d9456e2d47bf966674b0818ec, type: 3}
+  enemy2Prefab: {fileID: 101901852954807539, guid: 11a7045e9ff81fc49831da254d7121ca, type: 3}
   spawnDistance: 10
 --- !u!4 &1943775235
 Transform:

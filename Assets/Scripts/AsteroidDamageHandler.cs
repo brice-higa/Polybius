@@ -9,6 +9,7 @@ public class AsteroidDamageHandler : MonoBehaviour
        float invulnTimer = 0; //seconds of invulnerability after crashing.
        int correctLayer = 0;
        SpriteRenderer spriteRend;
+       public GameObject materialDrop;
     
 
        void Start(){
@@ -45,6 +46,8 @@ public class AsteroidDamageHandler : MonoBehaviour
 
         void Die(){
             Destroy(gameObject);
+            Instantiate(materialDrop, transform.position, Quaternion.identity);
+
         }
 
        

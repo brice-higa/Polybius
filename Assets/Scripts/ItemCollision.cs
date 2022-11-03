@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPackCollision : MonoBehaviour
+public class ItemCollision : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

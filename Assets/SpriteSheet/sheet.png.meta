@@ -141,10 +141,10 @@ TextureImporter:
       name: Enemy1
       rect:
         serializedVersion: 2
-        x: 434
-        y: 699
-        width: 91
-        height: 91
+        x: 435
+        y: 700
+        width: 89
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,7 +230,7 @@ TextureImporter:
         width: 32
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 1, y: 1, z: 0, w: 1}
       outline: []
       physicsShape: []
@@ -238,6 +238,90 @@ TextureImporter:
       bones: []
       spriteID: d81f7fb62e7e4f04a98341f1be83e3af
       internalID: 621121210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CopperDrop
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 764
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc106cedc01b72047b5837fa66b3f565
+      internalID: -314153827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asteroid2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 278
+        width: 99
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb5ddd7a71b2cc49880b674bea69425
+      internalID: -1427192483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IronDrop
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 736
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d80ed59c5e5f09449109c10e60b75b3
+      internalID: 2131047031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 36
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8db6bac44b978e45bd9f5ae61641dbc
+      internalID: 2029692708
       vertices: []
       indices: 
       edges: []
@@ -258,7 +342,11 @@ TextureImporter:
       Asteroid1: 1659789762
       Enemy1: -40944598
       Bullet2: -1258823952
+      IronDrop: 2131047031
+      Asteroid2: -1427192483
+      Enemy2: 2029692708
       healthPack: 621121210
+      CopperDrop: -314153827
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

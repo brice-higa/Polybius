@@ -52,7 +52,7 @@ public class MenuButtons : MonoBehaviour
     // Switch scene to play game
     public void StartGame()
     {
-        SceneManager.LoadScene("BriceTestScene");
+        SceneManager.LoadScene("MainGame");
     }
 
 
