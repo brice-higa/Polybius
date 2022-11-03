@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - healthTag
+  - Projectile
+  - copperTag
+  - ironTag
   layers:
   - Default
   - TransparentFX

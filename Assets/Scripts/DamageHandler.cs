@@ -9,6 +9,9 @@ public class DamageHandler : MonoBehaviour
        float invulnTimer = 0; //seconds of invulnerability after crashing.
        int correctLayer = 0;
        int maxHealth = 30;
+       public static int enemiesKilled = 0;
+       private int copper = 0;
+       private int iron = 0;
        SpriteRenderer spriteRend;
     
 
@@ -38,6 +41,14 @@ public class DamageHandler : MonoBehaviour
                     health = maxHealth;
 
                 Debug.Log("Trigger by " + other.gameObject + " and increased health by 5");
+            }
+            else if(other.gameObject.tag == "copperTag")
+            {
+                copper++;
+            }
+            else if(other.gameObject.tag == "ironTag")
+            {
+                iron++;
             }
             else
             {
@@ -79,6 +90,9 @@ public class DamageHandler : MonoBehaviour
         void OnGUI(){
             if(health > 0){
             GUI.Label(new Rect(0,0,100,50), "Health: " + health);
+            GUI.Label(new Rect(0,15,100,50), "Score: " + enemiesKilled);
+            GUI.Label(new Rect(0,30,100,50), "Copper: " + copper);
+            GUI.Label(new Rect(0,45,100,50), "Iron: " + iron);
             }
             else{
                 GUI.Label(new Rect(Screen.width/2 - 50, Screen.height/2 - 25,100,50), "GAME OVER");

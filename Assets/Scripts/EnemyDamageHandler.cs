@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static EnemySpawner;
+using static DamageHandler;
+using System;
 
 public class EnemyDamageHandler : MonoBehaviour
     {
@@ -11,6 +12,7 @@ public class EnemyDamageHandler : MonoBehaviour
        int correctLayer = 0;
        SpriteRenderer spriteRend;
        public GameObject healthDrop;
+       private System.Random rnd = new System.Random();
     
 
        void Start(){
@@ -33,7 +35,7 @@ public class EnemyDamageHandler : MonoBehaviour
 
             
             health--; //reduce health by 1 point
-            invulnTimer = 1.5f; // 1.5 seconds of invulnerability after collision
+            //invulnTimer = 1.5f; // 1.5 seconds of invulnerability after collision
             gameObject.layer = 8; //changing to invulnerable layer
 
         }
@@ -64,7 +66,8 @@ public class EnemyDamageHandler : MonoBehaviour
 
         void Die(){
             Destroy(gameObject);
-            Instantiate(healthDrop, transform.position, Quaternion.identity);
+            if (rnd.NextDouble() < 0.5f)
+                Instantiate(healthDrop, transform.position, Quaternion.identity);
 
         }
 

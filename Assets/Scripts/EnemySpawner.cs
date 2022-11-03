@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 
 public class EnemySpawner : MonoBehaviour
 {
 
-    public float enemyRate = 5; //seconds until new enemy appears
+    public float enemyRate = 3; //seconds until new enemy appears
     public float nextEnemy = 2; // first enemy spawned in 5 seconds.
-    public GameObject enemyPrefab;
+    public GameObject enemy1Prefab;
+    public GameObject enemy2Prefab;
     public float spawnDistance = 10f;
-    public static int enemiesKilled = 0;
+    private System.Random rnd = new System.Random();
 
     // Update is called once per frame
     void Update()
@@ -25,18 +26,14 @@ public class EnemySpawner : MonoBehaviour
             if(enemyRate < 2)
                 enemyRate = 2;*/
                 
-            Vector3 offset = Random.onUnitSphere;
+            Vector3 offset = UnityEngine.Random.onUnitSphere;
             offset.z = 0;
             offset = offset.normalized*spawnDistance;
-            Instantiate(enemyPrefab, transform.position + offset, Quaternion.identity);
+            if (rnd.NextDouble() < 0.75f)
+                Instantiate(enemy1Prefab, transform.position + offset, Quaternion.identity);
+            else
+                Instantiate(enemy2Prefab, transform.position + offset, Quaternion.identity);
         }
     }
 
-    void OnGUI(){
-            
-            GUI.Label(new Rect(0,15,100,50), "Score: " + enemiesKilled);
-               
-
-
-        }
 }
