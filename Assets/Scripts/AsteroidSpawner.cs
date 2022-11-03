@@ -29,9 +29,9 @@ public class AsteroidSpawner : MonoBehaviour
             offset = offset.normalized*spawnDistance;
 
             if (rnd.NextDouble() < 0.7f)
-                Instantiate(copperAsteroidPrefab, transform.position + offset, Quaternion.identity);
+                Instantiate(copperAsteroidPrefab, transform.position + offset, Quaternion.Euler(0,0,UnityEngine.Random.value*180));
             else
-                Instantiate(ironAsteroidPrefab, transform.position + offset, Quaternion.identity);
+                Instantiate(ironAsteroidPrefab, transform.position + offset, Quaternion.Euler(0,0,UnityEngine.Random.value*180));
         }
     }
 }
