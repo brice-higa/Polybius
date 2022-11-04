@@ -15,7 +15,7 @@ public class MenuButtons : MonoBehaviour
     public AudioMixer audioMixer;
     public Slider volumeSlider;
 
-    public double difficultyMultiplier = 1;
+    public float difficultyMultiplier = 1f;
 
     // Show only the Main Menu Panel at the start
     void Start()
@@ -68,16 +68,16 @@ public class MenuButtons : MonoBehaviour
 
     public void SetDifficultyEasy()
     {
-        difficultyMultiplier = 0.75;
+        difficultyMultiplier = 0.75f;
     }
 
     public void SetDifficultyMedium()
     {
-        difficultyMultiplier = 1;
+        difficultyMultiplier = 1f;
     }
 
     public void SetDifficultyHard()
     {
-        difficultyMultiplier = 1.25;
+        difficultyMultiplier = 1.25f;
     }
 }
