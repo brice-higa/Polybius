@@ -15,8 +15,6 @@ public class MenuButtons : MonoBehaviour
     public AudioMixer audioMixer;
     public Slider volumeSlider;
 
-    public float difficultyMultiplier = 1f;
-
     // Show only the Main Menu Panel at the start
     void Start()
     {
@@ -55,29 +53,30 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadScene("MainGame");
     }
 
-
+    //currently not working
     public void SetVolume(float sliderValue)
     {
         audioMixer.SetFloat("MasterVolume", Mathf.Log10(sliderValue) * 20);
     }
 
+    //currently not in use
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
     }
 
+    //Difficulty buttons
+    //Store information in PlayerPrefs to persist across scenes
     public void SetDifficultyEasy()
     {
-        difficultyMultiplier = 0.75f;
+        PlayerPrefs.SetFloat("EnemySpawnTimerIncrease", 2);
     }
-
     public void SetDifficultyMedium()
     {
-        difficultyMultiplier = 1f;
+        PlayerPrefs.SetFloat("EnemySpawnTimerIncrease", 0);
     }
-
     public void SetDifficultyHard()
     {
-        difficultyMultiplier = 1.25f;
+        PlayerPrefs.SetFloat("EnemySpawnTimerIncrease", -2);
     }
 }

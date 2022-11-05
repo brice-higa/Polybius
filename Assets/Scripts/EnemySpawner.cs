@@ -13,6 +13,12 @@ public class EnemySpawner : MonoBehaviour
     public float spawnDistance = 10f;
     private System.Random rnd = new System.Random();
 
+    // Apply spawn rate adjustments based on difficulty
+    void Start()
+    {
+        enemyRate += PlayerPrefs.GetFloat("EnemySpawnTimerIncrease");
+    }
+
     // Update is called once per frame
     void Update()
     {
