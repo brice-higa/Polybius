@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5843741499212925360}
   - component: {fileID: 8485634479602435736}
   - component: {fileID: 2889778520809366525}
+  - component: {fileID: -2067925965094975343}
   m_Layer: 0
   m_Name: copperAsteroid
   m_TagString: Untagged
@@ -168,3 +169,17 @@ MonoBehaviour:
   health: 3
   invulnPeriod: 0
   materialDrop: {fileID: 8418120413793779804, guid: d1939ebfb55cf9047b599e3dc044f722, type: 3}
+--- !u!114 &-2067925965094975343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4172148630160415869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776ce68d9635cd419ae59785a8f2fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DespawnRange: 30
+  player: {fileID: 0}

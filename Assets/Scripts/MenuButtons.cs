@@ -9,9 +9,11 @@ using UnityEngine.UI;
 public class MenuButtons : MonoBehaviour
 {
     
+    // Variables used to show/hide panels
     public GameObject MenuPanel;
     public GameObject OptionsPanel;
 
+    // Variables used for audio
     public AudioMixer audioMixer;
     public Slider volumeSlider;
 
@@ -69,7 +71,7 @@ public class MenuButtons : MonoBehaviour
     //Store information in PlayerPrefs to persist across scenes
     public void SetDifficultyEasy()
     {
-        PlayerPrefs.SetFloat("EnemySpawnTimerIncrease", 2);
+        PlayerPrefs.SetFloat("EnemySpawnTimerIncrease", 2); // Increase time between enemy spawns
     }
     public void SetDifficultyMedium()
     {
@@ -77,6 +79,6 @@ public class MenuButtons : MonoBehaviour
     }
     public void SetDifficultyHard()
     {
-        PlayerPrefs.SetFloat("EnemySpawnTimerIncrease", -2);
+        PlayerPrefs.SetFloat("EnemySpawnTimerIncrease", -2); //Negative value so enemies spawn more often
     }
 }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1830295949519895494}
   - component: {fileID: 8261517513510107739}
   - component: {fileID: 1700175007574852375}
+  - component: {fileID: -2393551751062247358}
   m_Layer: 7
   m_Name: Enemy2
   m_TagString: Untagged
@@ -184,3 +185,17 @@ MonoBehaviour:
   health: 5
   invulnPeriod: 0
   healthDrop: {fileID: 5215219944157461473, guid: 9e5bfd3d1533c01458a5185087f546e5, type: 3}
+--- !u!114 &-2393551751062247358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101901852954807539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776ce68d9635cd419ae59785a8f2fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DespawnRange: 30
+  player: {fileID: 0}
