@@ -6,7 +6,7 @@ public class DespawnHandler : MonoBehaviour
 {
 
     public float DespawnRange = 30f;
-    public float distance;
+    public float distanceFromPlayer;
     public GameObject player;
 
     // Start is called before the first frame update
@@ -23,10 +23,14 @@ public class DespawnHandler : MonoBehaviour
         player = GameObject.FindWithTag("Player");
 
         // calculate distance between player and this object
-        float distance = Vector3.Distance(player.transform.position, this.gameObject.transform.position); // bug: this is always 0 for some reason
+        distanceFromPlayer = Vector3.Distance(player.transform.position, this.gameObject.transform.position); 
+
+        //Debug.Log("Player: " + player.transform.position); // Debug notes: seems like both positions are being captured correctly
+        //Debug.Log(this.gameObject.name + " " + this.gameObject.transform.position);
+        //Debug.Log(distance);
 
         // If far enough from the player
-        if (DespawnRange < distance) //bug: this doesn't trigger even if I manually set distance to 100 in the inspector
+        if (DespawnRange < distanceFromPlayer) 
         {
             Debug.Log("Despawning" + this.gameObject.name);
             DespawnObject(); // destroy game object without giving points or drops.
