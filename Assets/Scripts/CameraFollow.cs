@@ -11,11 +11,16 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
 
+        // find player
         player = GameObject.FindWithTag("Player");
-        myTarget = player.transform;
-
-        if (myTarget != null)
+        
+        // if player exists
+        if (player != null)
         {
+            // convert gameObject to transform
+            myTarget = player.transform;
+
+            // move camera
             Vector3 targPos = myTarget.position;
             targPos.z = transform.position.z;
             transform.position = targPos; 
