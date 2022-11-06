@@ -22,17 +22,19 @@ public class DespawnHandler : MonoBehaviour
         // find the player
         player = GameObject.FindWithTag("Player");
 
-        // calculate distance between player and this object
-        distanceFromPlayer = Vector3.Distance(player.transform.position, this.gameObject.transform.position); 
+        // if the player exists
+        if(player != null)
+        {
+            // calculate distance between player and this object
+            distanceFromPlayer = Vector3.Distance(player.transform.position, this.gameObject.transform.position);
+        }
 
         //Debug.Log("Player: " + player.transform.position); // Debug notes: seems like both positions are being captured correctly
         //Debug.Log(this.gameObject.name + " " + this.gameObject.transform.position);
-        //Debug.Log(distance);
 
         // If far enough from the player
         if (DespawnRange < distanceFromPlayer) 
         {
-            Debug.Log("Despawning" + this.gameObject.name);
             DespawnObject(); // destroy game object without giving points or drops.
         }
 
@@ -41,6 +43,6 @@ public class DespawnHandler : MonoBehaviour
     void DespawnObject()
     {
         Destroy(this.gameObject);
-        Debug.Log("Despawned" + this.gameObject.name);
+        //Debug.Log("Despawned" + this.gameObject.name);
     }
 }
