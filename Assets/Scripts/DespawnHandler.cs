@@ -12,7 +12,7 @@ public class DespawnHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class DespawnHandler : MonoBehaviour
         player = GameObject.FindWithTag("Player");
 
         // if the player exists
-        if(player != null)
+        if (player != null)
         {
             // calculate distance between player and this object
             distanceFromPlayer = Vector3.Distance(player.transform.position, this.gameObject.transform.position);
@@ -33,7 +33,7 @@ public class DespawnHandler : MonoBehaviour
         //Debug.Log(this.gameObject.name + " " + this.gameObject.transform.position);
 
         // If far enough from the player
-        if (DespawnRange < distanceFromPlayer) 
+        if (DespawnRange < distanceFromPlayer)
         {
             DespawnObject(); // destroy game object without giving points or drops.
         }

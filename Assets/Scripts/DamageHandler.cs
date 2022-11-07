@@ -108,6 +108,7 @@ public class DamageHandler : MonoBehaviour
         else
         {
             GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height / 2 - 25, 100, 50), "GAME OVER");
+            Debug.Log("Game Over!"); //This does not trigger when the player dies, probably because this script is attatched to the player which no longer exists.
         }
 
     }
