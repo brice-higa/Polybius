@@ -3,61 +3,70 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletDamageHandler : MonoBehaviour
-    {
-       public int health = 1;
-       public float invulnPeriod = 0;
-       float invulnTimer = 0; //seconds of invulnerability after crashing.
-       int correctLayer = 0;
-       SpriteRenderer spriteRend;
-    
+{
+    public int health = 1;
+    public float invulnPeriod = 0;
+    float invulnTimer = 0; //seconds of invulnerability after crashing.
+    int correctLayer = 0;
+    SpriteRenderer spriteRend;
 
-       void Start(){
+
+    void Start()
+    {
         correctLayer = gameObject.layer;
 
         spriteRend = GetComponent<SpriteRenderer>();
         //This only gets the renderer on the parent object.
         //It doesn't work for children.
-        if(spriteRend == null){
+        if (spriteRend == null)
+        {
             spriteRend = transform.GetComponentInChildren<SpriteRenderer>();
 
-            if(spriteRend == null){
-                Debug.LogError("Object '"+gameObject.name+"' has no sprite renderer");
-                }
-            }
-        }
-
-        void OnTriggerEnter2D(Collider2D other){
-            
-            
-                health--; //reduce health by 1 point
-
-        }
-
-        void Update() {
-            
-            invulnTimer -= Time.deltaTime; //reducing invulnerable time.
-            
-            if (invulnTimer <= 0)
+            if (spriteRend == null)
             {
-                gameObject.layer = correctLayer;
-                if(spriteRend != null){
-                    spriteRend.enabled = true;
-                }
+                Debug.LogError("Object '" + gameObject.name + "' has no sprite renderer");
             }
-            else 
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+
+
+        health--; //reduce health by 1 point
+
+    }
+
+    void Update()
+    {
+
+        invulnTimer -= Time.deltaTime; //reducing invulnerable time.
+
+        if (invulnTimer <= 0)
+        {
+            gameObject.layer = correctLayer;
+            if (spriteRend != null)
             {
-                if(spriteRend != null){
-                    spriteRend.enabled = !spriteRend.enabled;
-                }
+                spriteRend.enabled = true;
             }
-
-            if (health <= 0){
-                Die();
+        }
+        else
+        {
+            if (spriteRend != null)
+            {
+                spriteRend.enabled = !spriteRend.enabled;
             }
         }
 
-        void Die(){
-            Destroy(gameObject);
+        if (health <= 0)
+        {
+            Die();
         }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
 
 }
