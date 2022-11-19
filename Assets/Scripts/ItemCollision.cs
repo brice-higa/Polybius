@@ -10,9 +10,15 @@ public class ItemCollision : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+
+        // Destroy this if the player collides with it
+        if(collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+
 
     }
 
