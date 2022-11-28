@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -2455626497835423748}
   m_Layer: 0
   m_Name: ironAsteroid
-  m_TagString: Untagged
+  m_TagString: Asteriod
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,4 +182,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DespawnRange: 30
+  distanceFromPlayer: 0
   player: {fileID: 0}
