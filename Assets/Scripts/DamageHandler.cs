@@ -17,6 +17,12 @@ public class DamageHandler : MonoBehaviour
 
     void Start()
     {
+
+        // When the player spawns, these values should be set to zero to prevent carry-over from previous game
+        enemiesKilled = 0;
+        copper = 0;
+        iron = 0;
+        
         correctLayer = gameObject.layer;
 
         spriteRend = GetComponent<SpriteRenderer>();
