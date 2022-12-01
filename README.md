@@ -8,3 +8,4 @@ Team Name: Sinnesloschen
   Mega Sari,
   Ethan La
 
+Contributions from each team member are in Contributions.txt
