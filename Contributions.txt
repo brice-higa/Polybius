@@ -16,6 +16,7 @@ Brice Higa:
     Implemented game over screen with back to menu button. 
     Fixed a bug that prevented the player from collecting iron. 
     Fixed a bug where bullets could destroy pick-ups. 
+    Fixed a bug where player score would carry over to new games. 
 
 Raul Guerra
 
