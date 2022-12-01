@@ -1,1 +1,25 @@
 
+Brice Higa:
+    Wrote Game Design Document draft. 
+    Set up GitHub repository with LFS, .gitignore, and .gitattributes for use with Unity.
+    Found art assets and added them to project.
+    Created test scene with alternate art assets and hitboxes.
+    Implemented Parallax in test scene.
+    Created main menu scene and wrote scripts to control buttons.
+    Implemented start, options, exit, and back to main menu buttons.
+    Added button prefab for use with future UI needed.
+    Fixed a bug with CameraFollow.cs which prevented it from following the player after death. 
+    Implemented difficulty selection buttons in the options menu and enemy spawn rate in MainGame. 
+    Created volume slider in options menu.
+    Fixed a bug which caused enemies and asteriods to spawn in odd locations. 
+    Implemented despawning for objects that are too far from the player. 
+    Implemented game over screen with back to menu button. 
+    Fixed a bug that prevented the player from collecting iron. 
+    Fixed a bug where bullets could destroy pick-ups. 
+
+Raul Guerra
+
+Mega Sari
+
+Ethan La
+
