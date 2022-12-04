@@ -17,6 +17,10 @@ Brice Higa:
     Fixed a bug that prevented the player from collecting iron. 
     Fixed a bug where bullets could destroy pick-ups. 
     Fixed a bug where player score would carry over to new games. 
+    Fixed a bug where the player's bullets could hit the player.
+    Fixed a bug where enemies could collide with pick-ups.
+    Added automatic shooting towards the nearest enemy.
+    Balance changes.
 
 Raul Guerra
 
