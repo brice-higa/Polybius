@@ -60,6 +60,12 @@ public class DamageHandler : MonoBehaviour
         {
             iron++;
         }
+
+        else if (other.gameObject.tag == "PlayerBullet") // Prevent player from colliding with their own bullets
+        {
+            return;
+        }
+
         else
         {
             health--; //reduce health by 1 point

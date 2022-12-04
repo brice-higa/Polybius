@@ -562,6 +562,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9187437709575835911, guid: 31c25a8214ec4b341921297106030835, type: 3}
   m_PrefabInstance: {fileID: 513680144}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &570009221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570009213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010373608f57f614db5e3c64fac33610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletOffset: {x: 0, y: 1, z: 0}
+  bulletPrefab: {fileID: 4754753186704676132, guid: a7216bad41f2787448b38f19f9799e8e, type: 3}
+  fireDelay: 0.5
+  myTarget: {fileID: 0}
 --- !u!1 &944672763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943775235}
   - component: {fileID: 1943775234}
+  - component: {fileID: 1943775238}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -1053,6 +1070,23 @@ Transform:
   m_Father: {fileID: 519420032}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1943775238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943775233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dbd5fe23302ce48ab15a9bf0ba4251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyRate: 5
+  nextEnemy: 1
+  enemy1Prefab: {fileID: 4693003958229822407, guid: ca13a02d9456e2d47bf966674b0818ec, type: 3}
+  enemy2Prefab: {fileID: 101901852954807539, guid: 11a7045e9ff81fc49831da254d7121ca, type: 3}
+  spawnDistance: 11
 --- !u!1 &2045868160
 GameObject:
   m_ObjectHideFlags: 0

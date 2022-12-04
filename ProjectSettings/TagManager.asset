@@ -8,6 +8,9 @@ TagManager:
   - Projectile
   - copperTag
   - ironTag
+  - Asteriod
+  - Enemy
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

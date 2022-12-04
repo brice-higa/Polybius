@@ -15,22 +15,22 @@ public class PlayerAutoShooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        bulletLayer = gameObject.layer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
+        
         // Decrease cooldown
         coolDownTimer -= Time.deltaTime;
 
         // Find all enemies
-        var targets = gameObject.FindGameOjbectsWithTag("Enemy");
+        myTarget = GameObject.FindWithTag("Enemy");
 
         // Find nearest enemy
-        var maxDistance = 100000;
-        for (var enemy : GameObject in targets)
+        /*var maxDistance = 100000;
+        foreach (GameObject enemy in targets)
         {
             var distance = Vector3.Distance(enemy.transform.position, transform.position);
             if (distance < maxDistance)
@@ -38,6 +38,11 @@ public class PlayerAutoShooting : MonoBehaviour
                 mytarget = enemy;
                 maxDistance = distance;
             }
+        }*/
+
+        if(myTarget == null)
+        {
+            return;
         }
 
         // Shoot at enemy, is cooldown is up
@@ -46,10 +51,22 @@ public class PlayerAutoShooting : MonoBehaviour
             // Reset cooldown
             coolDownTimer = fireDelay;
 
-            GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, myTarget.transform.position, transform.rotation);
-            bulletGO.layer = bulletLayer;
+            //Vector2 direction = myTarget.transform.position - transform.position;
+            //direction.Normalize();
+            //GameObject bullet = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+
+            GameObject bullet = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
+
+            
+            //bullet.transform.LookAt(myTarget.transform);
+            
+            
+            Quaternion rotation = Quaternion.LookRotation(myTarget.transform.position - bullet.transform.position, bullet.transform.TransformDirection(Vector3.back));
+            bullet.transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+
+            bullet.layer = bulletLayer;
 
         }
-        */
+        
     }
 }

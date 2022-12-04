@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static DamageHandler;
-using System;
 
-public class EnemyDamageHandler : MonoBehaviour
+public class PlayerBulletDamageHandler : MonoBehaviour
 {
     public int health = 1;
     public float invulnPeriod = 0;
     float invulnTimer = 0; //seconds of invulnerability after crashing.
     int correctLayer = 0;
     SpriteRenderer spriteRend;
-    public GameObject healthDrop;
-    private System.Random rnd = new System.Random();
 
 
     void Start()
@@ -35,16 +31,13 @@ public class EnemyDamageHandler : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("Trigger!");
-
 
         // If this collides with something other than a pickup item
-        if (other.gameObject.tag != "healthTag" && other.gameObject.tag != "ironTag" && other.gameObject.tag != "copperTag")
+        if (other.gameObject.tag != "healthTag" && other.gameObject.tag != "ironTag" && other.gameObject.tag != "copperTag" && other.gameObject.tag != "Player")
         {
             health--; //reduce health by 1 point
         }
-        //invulnTimer = 1.5f; // 1.5 seconds of invulnerability after collision
-        gameObject.layer = 8; //changing to invulnerable layer
+
 
     }
 
@@ -72,17 +65,12 @@ public class EnemyDamageHandler : MonoBehaviour
         if (health <= 0)
         {
             Die();
-            enemiesKilled++;
         }
     }
 
     void Die()
     {
         Destroy(gameObject);
-        if (rnd.NextDouble() < 0.5f)
-            Instantiate(healthDrop, transform.position, Quaternion.identity);
-
     }
-
 
 }

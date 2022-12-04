@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
 
     public float enemyRate = 3; //seconds until new enemy appears
-    public float nextEnemy = 2; // first enemy spawned in 5 seconds.
+    public float nextEnemy = 0; // first enemy spawned in 5 seconds.
     public GameObject enemy1Prefab;
     public GameObject enemy2Prefab;
     public float spawnDistance = 10f;
