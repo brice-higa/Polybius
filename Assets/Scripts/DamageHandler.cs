@@ -8,10 +8,10 @@ public class DamageHandler : MonoBehaviour
     public float invulnPeriod = 0;
     float invulnTimer = 0; //seconds of invulnerability after crashing.
     int correctLayer = 0;
-    int maxHealth = 30;
+    public static int maxHealth = 30;
     public static int enemiesKilled = 0;
-    private int copper = 0;
-    private int iron = 0;
+    public static int copper = 0;
+    public static int iron = 0;
     SpriteRenderer spriteRend;
 
 
@@ -19,6 +19,7 @@ public class DamageHandler : MonoBehaviour
     {
 
         // When the player spawns, these values should be set to zero to prevent carry-over from previous game
+        maxHealth = 30;
         enemiesKilled = 0;
         copper = 0;
         iron = 0;

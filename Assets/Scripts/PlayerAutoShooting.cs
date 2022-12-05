@@ -8,13 +8,14 @@ public class PlayerAutoShooting : MonoBehaviour
     public Vector3 bulletOffset = new Vector3(0, 1f, 0);
     public GameObject bulletPrefab;
     int bulletLayer;
-    public float fireDelay = 0.5f;
+    public static float fireDelay = 0.5f;
     float coolDownTimer = 0;
     public GameObject myTarget;
 
     // Start is called before the first frame update
     void Start()
     {
+        fireDelay = 0.5f;
         bulletLayer = gameObject.layer;
     }
 
