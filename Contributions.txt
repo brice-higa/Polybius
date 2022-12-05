@@ -27,4 +27,7 @@ Raul Guerra
 Mega Sari
 
 Ethan La
-
+    Looked over and touched up Game Design Document.
+    Made suggestions & comments on initial prototype.
+    Implemented Pause / Inventory / Upgrades Menu.
+    Wrote new scripts & edited old scripts a bit to make above work.
