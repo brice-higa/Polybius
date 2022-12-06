@@ -1816,7 +1816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb81f40a4e790b418ffce4d9bc6cc4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidRate: 5
+  asteroidRate: 3
   nextAsteroid: 1
   copperAsteroidPrefab: {fileID: 4172148630160415869, guid: 094a2864b57fd0443bfc34350bea8100, type: 3}
   ironAsteroidPrefab: {fileID: 4172148630160415869, guid: 7decbdab4eb60154393c291f3dce9df1, type: 3}
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0dbd5fe23302ce48ab15a9bf0ba4251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyRate: 5
+  enemyRate: 4
   nextEnemy: 1
   enemy1Prefab: {fileID: 4693003958229822407, guid: ca13a02d9456e2d47bf966674b0818ec, type: 3}
   enemy2Prefab: {fileID: 101901852954807539, guid: 11a7045e9ff81fc49831da254d7121ca, type: 3}
