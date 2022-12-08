@@ -38,8 +38,8 @@ public class EnemyDamageHandler : MonoBehaviour
         //Debug.Log("Trigger!");
 
 
-        // If this collides with something other than a pickup item
-        if (other.gameObject.tag != "healthTag" && other.gameObject.tag != "ironTag" && other.gameObject.tag != "copperTag")
+        // If this collides with something other than a pickup item, asteriod, or enemy
+        if (other.gameObject.tag != "healthTag" && other.gameObject.tag != "ironTag" && other.gameObject.tag != "copperTag" && other.gameObject.tag != "Asteriod" && other.gameObject.tag != "Enemy")
         {
             health--; //reduce health by 1 point
         }
@@ -79,7 +79,7 @@ public class EnemyDamageHandler : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
-        if (rnd.NextDouble() < 0.5f)
+        if (rnd.NextDouble() < 0.1f)
             Instantiate(healthDrop, transform.position, Quaternion.identity);
 
     }

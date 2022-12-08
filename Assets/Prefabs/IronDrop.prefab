@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8815990371363271820}
   - component: {fileID: 1775318549239644590}
   - component: {fileID: 4428302343140460018}
+  - component: {fileID: 8034488524450458270}
   m_Layer: 0
   m_Name: IronDrop
   m_TagString: ironTag
@@ -146,3 +147,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85acc9e9b55d9b478f3bf3cadc30f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8034488524450458270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418120413793779804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776ce68d9635cd419ae59785a8f2fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DespawnRange: 30
+  distanceFromPlayer: 0
+  player: {fileID: 0}

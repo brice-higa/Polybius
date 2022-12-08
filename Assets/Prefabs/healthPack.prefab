@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5215219944157461472}
   - component: {fileID: 5215219944157461500}
   - component: {fileID: 5215219944157461501}
+  - component: {fileID: -2493233818542736489}
   m_Layer: 0
   m_Name: healthPack
   m_TagString: healthTag
@@ -146,3 +147,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85acc9e9b55d9b478f3bf3cadc30f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2493233818542736489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215219944157461473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776ce68d9635cd419ae59785a8f2fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DespawnRange: 30
+  distanceFromPlayer: 0
+  player: {fileID: 0}
