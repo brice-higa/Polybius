@@ -5,8 +5,8 @@ using UnityEngine;
 public class DamageHandler : MonoBehaviour
 {
     public int health = 1;
-    public float invulnPeriod = 0;
-    float invulnTimer = 0; //seconds of invulnerability after crashing.
+    public float invulnPeriod = 1f;
+    public float invulnTimer = 0; //seconds of invulnerability after crashing.
     int correctLayer = 0;
     public static int maxHealth = 30;
     public static int enemiesKilled = 0;
@@ -70,7 +70,7 @@ public class DamageHandler : MonoBehaviour
         else
         {
             health--; //reduce health by 1 point
-            invulnTimer = 1.5f; // 1.5 seconds of invulnerability after collision
+            invulnTimer = invulnPeriod; // invulnerability after collision
             gameObject.layer = 8; //changing to invulnerable layer
         }
 

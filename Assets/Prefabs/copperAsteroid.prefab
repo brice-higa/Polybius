@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4650f6fdaa03df4bb78ae05988e0748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 2
   invulnPeriod: 0
   materialDrop: {fileID: 8418120413793779804, guid: d1939ebfb55cf9047b599e3dc044f722, type: 3}
 --- !u!114 &-2067925965094975343
