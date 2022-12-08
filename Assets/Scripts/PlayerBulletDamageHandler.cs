@@ -32,8 +32,8 @@ public class PlayerBulletDamageHandler : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        // If this collides with something other than a pickup item
-        if (other.gameObject.tag != "healthTag" && other.gameObject.tag != "ironTag" && other.gameObject.tag != "copperTag" && other.gameObject.tag != "Player")
+        // If this collides with something other than a pickup item, player, or bullet
+        if (other.gameObject.tag != "healthTag" && other.gameObject.tag != "ironTag" && other.gameObject.tag != "copperTag" && other.gameObject.tag != "Player" && other.gameObject.tag != "Bullet")
         {
             health--; //reduce health by 1 point
         }

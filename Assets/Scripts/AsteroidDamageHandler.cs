@@ -33,12 +33,12 @@ public class AsteroidDamageHandler : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-
-        health--; //reduce health by 1 point
-
-
+        // If this collides with something other than a pickup item, asteriod, or enemy
+        if (other.gameObject.tag != "healthTag" && other.gameObject.tag != "ironTag" && other.gameObject.tag != "copperTag" && other.gameObject.tag != "Asteriod" && other.gameObject.tag != "Enemy")
+        {
+            health--; //reduce health by 1 point
+        }
     }
-
     void Update()
     {
 

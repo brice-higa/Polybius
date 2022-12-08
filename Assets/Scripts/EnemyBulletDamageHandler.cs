@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletDamageHandler : MonoBehaviour
+public class EnemyBulletDamageHandler : MonoBehaviour
 {
     public int health = 1;
     public float invulnPeriod = 0;
@@ -32,8 +32,8 @@ public class BulletDamageHandler : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        // If this collides with something other than a pickup item
-        if(other.gameObject.tag != "healthTag" && other.gameObject.tag != "ironTag" && other.gameObject.tag != "copperTag")
+        // If this collides with something other than a pickup item, enemy, or asteriod, or bullet
+        if(other.gameObject.tag != "healthTag" && other.gameObject.tag != "ironTag" && other.gameObject.tag != "copperTag" && other.gameObject.tag != "Enemy" && other.gameObject.tag != "Asteriod" && other.gameObject.tag != "Bullet")
         {
             health--; //reduce health by 1 point
         }

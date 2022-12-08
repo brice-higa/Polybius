@@ -10,7 +10,7 @@ TagManager:
   - ironTag
   - Asteriod
   - Enemy
-  - PlayerBullet
+  - Bullet
   layers:
   - Default
   - TransparentFX
