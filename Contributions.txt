@@ -20,13 +20,16 @@ Brice Higa:
     Fixed a bug where the player's bullets could hit the player.
     Fixed a bug where enemies could collide with pick-ups.
     Added automatic shooting towards the nearest enemy.
+	Prevented Enemies and Asteriods from colliding with each other and themselves.
+	Prevented bullets from colliding with each other. 
     Balance changes.
 
-Raul Guerra
+Raul Guerra:
+	A lot of core gameplay stuff.
 
-Mega Sari
+Mega Sari:
 
-Ethan La
+Ethan La:
     Looked over and touched up Game Design Document.
     Made suggestions & comments on initial prototype.
     Implemented Pause / Inventory / Upgrades Menu.
