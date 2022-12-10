@@ -15,6 +15,7 @@ public class GameOverScreen : MonoBehaviour
     void Start()
     {
         GameOverGUI.SetActive(false); // Game over screen does not show by default
+        Time.timeScale = 1f; // Make game run in normal time
 
         // find the player, this should ONLY work if the player starts in the scene
         player = GameObject.FindWithTag("Player");
@@ -28,6 +29,7 @@ public class GameOverScreen : MonoBehaviour
         if(player == null)
         {
             GameOverGUI.SetActive(true); // show game over screen after the player dies
+            Time.timeScale = 0f; // Freeze time so that the survival timer does not increase after the player dies
         }
 
     }
@@ -35,6 +37,7 @@ public class GameOverScreen : MonoBehaviour
     // Switch to main menu scene
     public void BackToMainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 }

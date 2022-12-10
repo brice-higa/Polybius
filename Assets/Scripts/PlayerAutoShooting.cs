@@ -26,21 +26,17 @@ public class PlayerAutoShooting : MonoBehaviour
         // Decrease cooldown
         coolDownTimer -= Time.deltaTime;
 
-        // Find all enemies
+        // Find a enemy
         myTarget = GameObject.FindWithTag("Enemy");
 
-        // Find nearest enemy
-        /*var maxDistance = 100000;
-        foreach (GameObject enemy in targets)
-        {
-            var distance = Vector3.Distance(enemy.transform.position, transform.position);
-            if (distance < maxDistance)
-            {
-                mytarget = enemy;
-                maxDistance = distance;
-            }
-        }*/
 
+        // if there are no enemies, target an asteriod
+        if(myTarget == null)
+        {
+            myTarget = GameObject.FindWithTag("Asteriod");
+        }
+
+        // if there are no valid targets, don't whoot
         if(myTarget == null)
         {
             return;
@@ -52,19 +48,14 @@ public class PlayerAutoShooting : MonoBehaviour
             // Reset cooldown
             coolDownTimer = fireDelay;
 
-            //Vector2 direction = myTarget.transform.position - transform.position;
-            //direction.Normalize();
-            //GameObject bullet = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-
+            // create bullet
             GameObject bullet = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
-
             
-            //bullet.transform.LookAt(myTarget.transform);
-            
-            
+            // rotate bullet towards target 
             Quaternion rotation = Quaternion.LookRotation(myTarget.transform.position - bullet.transform.position, bullet.transform.TransformDirection(Vector3.back));
             bullet.transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
 
+            // set bullet layer
             bullet.layer = bulletLayer;
 
         }

@@ -8,12 +8,12 @@ public class PlayerShooting : MonoBehaviour
     public Vector3 bulletOffset = new Vector3(0, 1f, 0);
     public GameObject bulletPrefab;
     int bulletLayer;
-    public static float fireDelay = 0.5f;
+    public static float fireDelay = 0.7f;
     float coolDownTimer = 0;
 
     void Start()
     {
-        fireDelay = 0.5f;
+        fireDelay = 0.7f;
         bulletLayer = gameObject.layer;
     }
 
@@ -25,7 +25,6 @@ public class PlayerShooting : MonoBehaviour
 
         if (Input.GetButton("Fire1") && coolDownTimer <= 0)
         {
-            //Fire:
 
             //Debug.Log("FIREEEEE");
             coolDownTimer = fireDelay;

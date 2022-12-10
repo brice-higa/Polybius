@@ -18,7 +18,7 @@ public class DamageHandler : MonoBehaviour
     void Start()
     {
 
-        // When the player spawns, these values should be set to zero to prevent carry-over from previous game
+        // When the player spawns, these values should be set to prevent carry-over from previous games
         maxHealth = 30;
         enemiesKilled = 0;
         copper = 0;
