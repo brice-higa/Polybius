@@ -28,6 +28,7 @@ Raul Guerra:
 	A lot of core gameplay stuff.
 
 Mega Sari:
+	Adding sound effect and Background music. 
 
 Ethan La:
     Looked over and touched up Game Design Document.
