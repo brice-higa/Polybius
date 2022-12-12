@@ -12,6 +12,7 @@ public class MenuButtons : MonoBehaviour
     // Variables used to show/hide panels
     public GameObject MenuPanel;
     public GameObject OptionsPanel;
+    public GameObject HelpPanel;
 
     // Variables used for audio
     public AudioMixer audioMixer;
@@ -22,6 +23,7 @@ public class MenuButtons : MonoBehaviour
     {
         MenuPanel.SetActive(true);
         OptionsPanel.SetActive(false);
+        HelpPanel.SetActive(false);
     }
 
     void Update()
@@ -34,6 +36,7 @@ public class MenuButtons : MonoBehaviour
     {
         MenuPanel.SetActive(true);
         OptionsPanel.SetActive(false);
+        HelpPanel.SetActive(false);
     }
 
     // Options button
@@ -41,6 +44,13 @@ public class MenuButtons : MonoBehaviour
     {
         MenuPanel.SetActive(false);
         OptionsPanel.SetActive(true);
+    }
+
+    // Help button
+    public void SwitchToHelp()
+    {
+        MenuPanel.SetActive(false);
+        HelpPanel.SetActive(true);
     }
 
     // Exit button

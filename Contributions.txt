@@ -39,3 +39,5 @@ Ethan La:
     Made suggestions & comments on initial prototype.
     Implemented Pause / Inventory / Upgrades Menu.
     Wrote new scripts & edited old scripts a bit to make above work.
+    Implemented Help Screen, detailing controls.
+    Edited older scripts & UI to make above work.
