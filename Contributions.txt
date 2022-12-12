@@ -1,6 +1,6 @@
 
 Brice Higa:
-    Wrote Game Design Document draft. 
+    Wrote enitre Game Design Document draft. 
     Set up GitHub repository with LFS, .gitignore, and .gitattributes for use with Unity.
     Found art assets and added them to project.
     Created test scene with alternate art assets and hitboxes.
@@ -20,15 +20,19 @@ Brice Higa:
     Fixed a bug where the player's bullets could hit the player.
     Fixed a bug where enemies could collide with pick-ups.
     Added automatic shooting towards the nearest enemy.
-	Prevented Enemies and Asteriods from colliding with each other and themselves.
-	Prevented bullets from colliding with each other. 
+    Prevented Enemies and Asteriods from colliding with each other and themselves.
+    Prevented bullets from colliding with each other. 
     Balance changes.
+    Implemented survival timer.
+    Implemented increasing enemy spawns.
+    Fixed UI scaling.
+    Various GitHub repository fixes.
 
 Raul Guerra:
-	A lot of core gameplay stuff.
+    A lot of core gameplay stuff.
 
 Mega Sari:
-	Adding sound effect and Background music. 
+    Adding sound effect and Background music. 
 
 Ethan La:
     Looked over and touched up Game Design Document.
