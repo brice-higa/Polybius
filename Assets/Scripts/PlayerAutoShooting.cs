@@ -11,6 +11,7 @@ public class PlayerAutoShooting : MonoBehaviour
     public static float fireDelay = 0.5f;
     float coolDownTimer = 0;
     public GameObject myTarget;
+    AudioSource m_shootingSound;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public class PlayerAutoShooting : MonoBehaviour
     void Update()
     {
         
+        m_shootingSound = GetComponent<AudioSource>();
+
         // Decrease cooldown
         coolDownTimer -= Time.deltaTime;
 
@@ -45,6 +48,8 @@ public class PlayerAutoShooting : MonoBehaviour
         // Shoot at enemy, is cooldown is up
         if (coolDownTimer <= 0)
         {
+            m_shootingSound.Play();
+            
             // Reset cooldown
             coolDownTimer = fireDelay;
 
