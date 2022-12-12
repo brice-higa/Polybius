@@ -11,10 +11,13 @@ public class PlayerShooting : MonoBehaviour
     public static float fireDelay = 0.7f;
     float coolDownTimer = 0;
 
+    AudioSource m_shootingSound; 
+
     void Start()
     {
         fireDelay = 0.7f;
         bulletLayer = gameObject.layer;
+        m_shootingSound = GetComponent<AudioSource>();
     }
 
 
@@ -33,6 +36,7 @@ public class PlayerShooting : MonoBehaviour
 
             GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
             bulletGO.layer = bulletLayer;
+            m_shootingSound.Play();
 
         }
     }
