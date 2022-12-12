@@ -114,7 +114,7 @@ public class DamageHandler : MonoBehaviour
         if (health > 0)
         {
             GUI.Label(new Rect(0, 0, 100, 50), "Health: " + health);
-            GUI.Label(new Rect(0, 15, 100, 50), "Enemies Killed: " + enemiesKilled);
+            GUI.Label(new Rect(0, 15, 100, 50), "Kills: " + enemiesKilled);
             GUI.Label(new Rect(0, 30, 100, 50), "Copper: " + copper);
             GUI.Label(new Rect(0, 45, 100, 50), "Iron: " + iron);
         }
